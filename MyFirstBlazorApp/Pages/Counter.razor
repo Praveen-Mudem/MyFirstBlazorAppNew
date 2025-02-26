@@ -1,0 +1,18 @@
+﻿@* <MyFirstBlazorApp.Components.MyFirstComponent /> *@
+@* @using MyFirstBlazorApp.Components.MyFirstComponent *@
+@page "/counter"
+
+<h1>Counter</h1>
+<p>The counter value is @currentCount</p>
+<button class="btn btn-primary" @onclick=IncrementCounter>Increment counter</button>
+ 
+<MyFirstBlazorApp.Components.MyFirstComponent CurrentCounterValue=@currentCount />
+
+@code {
+    public int currentCount = 42;
+    private void IncrementCounter()
+    {
+        currentCount++;
+    }
+  
+}
